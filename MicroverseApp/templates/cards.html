@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customers</title>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+</head>
+<body>
+    <h2>{{head}} </h2>
+    <table class="{{customers.count}}">
+        <thead>
+            
+            <th>Bank</th>
+            <th>Card Number</th>
+            <th>Status</th>
+            <th>Date created</th>
+            <th>Expiry Date</th>
+        </thead>
+        <tbody>
+            {% for customer in cards %}
+            <tr>
+                <td>{{customer.bank_account}}</td>
+                <td>{{customer.card_no}}</td>
+                <td>
+                    {% if customer.status == 0 %}
+                            <span class="badge bg-primary rounded-pill px-3">Active</span>
+                             {% else %}
+                            <span class="badge bg-secondary rounded-pill px-3">Inactive</span> {% endif %}
+                </td>
+                
+                <td>{{customer.date_created}}</td>
+                <td>{{customer.expiry_date}}</td>
+            </tr>
+
+
+            {% endfor %}
+        </tbody>
+
+    </table>
+</body>
+</html>

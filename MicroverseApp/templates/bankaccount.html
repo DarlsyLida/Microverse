@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customers</title>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+</head>
+<body>
+    <h2>{{head}} </h2>
+    <table class="{{customers.count}}">
+        <thead>
+            <th>National ID</th>
+            <th>Phone Number</th>
+            <th>Account Number</th>
+            <th>Available Amount</th>
+            <th>Date created</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% for customer in accounts %}
+            <tr>
+                <td>{{customer.user.national_ID}}</td>
+                <td>{{customer.phone_number}}</td>
+                <td>{{customer.account_no}}</td>
+                <td>{{customer.available_amount}}</td>
+                <td>{{customer.date_created}}</td>
+                <td> <a href="/create_card/{{customer.id}}">Create Card</a> <a href="/view_cards/{{customer.id}}">View Card</a></td>
+            </tr>
+
+
+            {% endfor %}
+        </tbody>
+
+    </table>
+</body>
+</html>

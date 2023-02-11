@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+</head>
+<body>
+  <div class="container">
+    <div class="error">
+      {% for m in messages %}
+    <div class="alert alert-{{m.type}}">{{m.message}}</div>    
+    {% endfor%}
+    </div>
+    <form method="POST" action="">
+      {% csrf_token %} 
+
+      {% for f in form %}
+          <div class="form-group mb-3">
+           {{f.label_tag}}
+            {{f}}
+          </div>
+      {% endfor %}
+      <div class="check-group flexbox">
+        <label class="check-box">
+            <input type="checkbox" class="check-box-input" checked required>
+            <span class="remember-text">I agree terms & conditions</span>
+        </label>
+    </div>      
+    </h5>          
+    <input type="submit" class="btn btn-primary btn-block" value="Register">
+  </div>
+  <div class="card-footer text-muted" style="background-color: white ;">
+    
+    <p>Already have an account with Us? <a href="{% url 'login' %}" class=sel> Login</a></p>
+  </div>
+</div>
+    </form>
+   
+  </div>
+  
+</body>
+</html>

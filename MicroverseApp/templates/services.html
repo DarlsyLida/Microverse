@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+
+.icon{
+    width: 75px;
+    height: 75px;
+    color: white;
+  }
+
+{% endblock %}
+{% block body %}
+<main>
+
+    <!-- Hero Start-->
+    <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center pt-50">
+                        <h2>Services</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Hero End -->
+    <!-- Services Area Start -->
+    <div class="services-area pt-150 pb-150" data-background="{% static 'img/gallery/section_bg02.jpg' %}">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <span>Services provided</span>
+                        <h2>Community Empowerment</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <!-- <span class="flaticon-work"></span> -->
+                            <img class="icon" src="{% static 'img/bursary.png' %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Bursary</a></h5>
+                            <p>Provide bursary to pupils and students with fee issues.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <img class="icon" src="{% static 'img/Personal.png' %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Individual Loans</a></h5>
+                            <p>Provide loan to individuals with financial goals.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <!-- <span class="flaticon-loan-1"></span> -->
+                            <img class="icon" src="{% static 'img/group.jpg' %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Group Loans</a></h5>
+                            <p>Provide loans to the registered group of individuals like SACCOs</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <!-- <span class="flaticon-like"></span> -->
+                            <img class="icon" src="{% static 'img/motorcycle_b.png' %}" alt="">
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="#">Youth Empowerment</a></h5>
+                            <p>Provide capital of Pikipiki loans to the youths.</p>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+        </div>
+    </div>
+    <!-- Services Area End -->
+
+</main>
+
+
+{% endblock %}

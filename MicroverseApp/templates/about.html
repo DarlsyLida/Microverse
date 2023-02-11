@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+
+.icon{
+    width: 75px;
+    height: 75px;
+    color: white;
+  }
+
+{% endblock %}
+{% block body %}
+<main>
+    <div class="hero-area2  slider-height2 hero-overly2 d-flex align-items-center ">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap text-center pt-50">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-low-area section-padding2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="about-caption mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-35">
+                            <span>About </span>
+                            <h2>Building a Brighter Financial Future for the community.</h2>
+                        </div>
+                        <p>Providing zero interest rate loans to groups and individuals, inorder to start and improve their businesses.</p>
+                        <p>Providing bursary to students and pupils with fee issues inorder for them to continue with their learning.</p>
+                        <p>Providing capital of Pikipiki loan to the youths, inorder to create self employment to the youths.</p>
+                        <a href="#" class="btn">Appply</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <div class="about-font-img d-none d-lg-block">
+                            <img src="{% static 'img/gallery/about2.png' %}" alt="">
+                        </div>
+                        <div class="about-back-img ">
+                            <img src="{% static 'img/gallery/about1.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Law End-->
+
+</main>
+
+
+{% endblock %}
